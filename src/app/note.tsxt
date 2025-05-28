@@ -1,0 +1,24 @@
+import Header from "@/compnents/Header";
+
+export default function Home() {
+  return (
+    <div className=''>
+      <div className=" bg-[url("/background.svg")] bg-cover bg-center h-screen ">
+        <Header />
+        <div className='flex text-white text-center'>
+          <div className='flex flex-col gap-3'>
+            <h1>Connecting Communities</h1>
+            <p>
+              Ampersand Hi-Tech provides reliable internet and technology
+              solutions that connect and empower communities to build a better
+              future for individuals, businesses, and organizations to thrive in
+              the digital age.
+            </p>
+            <button className='bg-white'>Talk To Our Team</button>
+          </div>
+        </div>
+      </div>
+      <div className='h-[100px] bg-red-700'>hello</div>
+    </div>
+  );
+}
