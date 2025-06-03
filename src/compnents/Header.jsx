@@ -11,6 +11,7 @@ export default function Header() {
     <div className='flex justify-between items-center px-9 py-4 text-white relative z-50'>
       {/* Logo Section */}
       <div className='flex items-center gap-3'>
+        <Link href="/">
         <Image
           src='/logo.svg'
           alt='Ampersand Logo'
@@ -18,6 +19,7 @@ export default function Header() {
           width={40}
           className='object-contain'
         />
+        </Link>
         <div className='flex flex-col'>
           <h2 className='text-xl font-bold'>AMPERSAND</h2>
           <p className='text-xs'>Hi~Technologies</p>

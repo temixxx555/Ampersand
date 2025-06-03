@@ -8,13 +8,15 @@ export default function Footer() {
         {/* Left Section: Logo and Contact Info */}
         <div className='flex flex-col gap-4'>
           <div className='flex items-center gap-3'>
-            <Image
-              src='/logo.svg'
-              alt='Ampersand Logo'
-              height={40}
-              width={40}
-              className='object-contain relative -top-12'
-            />
+            <Link href='/'>
+              <Image
+                src='/logo.svg'
+                alt='Ampersand Logo'
+                height={40}
+                width={40}
+                className='object-contain relative -top-12'
+              />
+            </Link>
             <div className='flex flex-col gap-1'>
               <h2 className='text-2xl font-normal'>AMPERSAND</h2>
               <p className='mb-2 text-white/30'>Hi~Technologies</p>

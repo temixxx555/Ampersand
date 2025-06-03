@@ -72,7 +72,7 @@ const QuoteForm = () => {
           placeholder='Organization'
           className='border border-[#F4F4F4] focus:outline-none p-2 rounded w-full'
         />
-        <select className='border border-[#F4F4F4] focus:outline-nonetext-[#A6A6AB] p-2 rounded w-full'>
+        <select className='border border-[#F4F4F4] focus:outline-none text-[#A6A6AB] p-2 rounded w-full'>
           <option>Service</option>
           <option>Web Development</option>
           <option>App Development</option>
