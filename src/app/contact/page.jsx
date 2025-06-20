@@ -6,16 +6,16 @@ export default function Contact() {
   return (
     <div className='min-h-screen flex flex-col'>
       {/* Hero Section */}
-      <div className="relative w-full flex flex-col bg-[url('/background2.svg')] bg-cover bg-center h-screen">
+      <div className="relative w-full flex flex-col bg-[url('https://i.imgur.com/Chlm2UE.png')] bg-cover bg-center h-screen">
         <Header />
         <div className='flex flex-1'>
           {/* Left side - text content */}
           <div className='w-full md:w-1/2 flex  justify-center p-4 md:p-8 absolute inset-0 bg-[#21252966]/40 text-white'>
             <div className='max-w-lg mt-76 md:mt-74'>
-              <h1 className='text-3xl md:text-5xl font-normal mb-4'>
+              <h1 className='text-3xl md:text-5xl font-normal mb-9'>
                 Contact us
               </h1>
-              <p className='mb-6 text-[#A6A6AB] md:text-lg leading-relaxed'>
+              <p className='mb-6 text-[#A6A6AB] md:text-md leading-relaxed'>
                 We’re committed to providing the cutting-edge connectivity and
                 security solutions your business needs to thrive.
               </p>
@@ -26,7 +26,7 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className='max-w-6xl mx-auto px-10 py-17 grid grid-cols-1 md:grid-cols-2 gap-5'>
+      <div className='max-w-6xl mx-auto px-2 py-17 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-1'>
         {/* Left: Location & Open hours */}
         <div className='space-y-8'>
           <div>
@@ -97,13 +97,13 @@ export default function Contact() {
       </div>
 
       {/* Deep Knowledge Section */}
-      <div className='min-w-full flex flex-col md:flex-row justify-center items-center py-8 px-4 md:px-16 gap-6 md:gap-8 bg-[#f4f4f4]'>
+      <div className='min-w-full flex flex-col md:flex-row justify-center items-center py-2 px-4 md:px-16 gap-6 md:gap-8 bg-[#f4f4f4]'>
         <Image
           src='/9.svg'
           alt='Deep Knowledge'
           height={624.519287109375}
           width={394.96484375}
-          className='w-full md:w-1/3 object-cover'
+          className='w-full md:w-1/3 object-cover relative md:-top-12'
         />
         <div className='text-[#212529] flex flex-col gap-5'>
           <h1 className='font-normal text-2xl md:text-3xl'>

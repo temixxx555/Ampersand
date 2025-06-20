@@ -43,7 +43,7 @@ export default function Footer() {
         </div>
 
         {/* Right Section: Legal */}
-        <div className='flex flex-col gap-2'>
+        <div className='flex flex-col md:w-[420px] gap-2'>
           <h2 className='text-2xl font-normal'>Legal</h2>
           <Link href='/terms' className='text-sm hover:underline'>
             Privacy and Cookies Policy

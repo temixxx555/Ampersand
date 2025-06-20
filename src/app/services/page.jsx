@@ -184,16 +184,16 @@ export default function Services() {
   return (
     <div className='min-h-screen flex flex-col'>
       {/* Hero Section */}
-      <div className="relative w-full flex flex-col bg-[url('/background2.svg')] bg-cover bg-center h-screen">
+      <div className="relative w-full flex flex-col bg-[url('https://i.imgur.com/Chlm2UE.png')] bg-cover bg-center h-screen">
         <Header />
         <div className='flex flex-1'>
           {/* Left side - text content */}
           <div className='w-full md:w-1/2 flex  justify-center p-4 md:p-8 absolute inset-0 bg-[#21252966]/40 text-white'>
             <div className='max-w-lg mt-76 md:mt-74'>
-              <h1 className='text-3xl md:text-5xl font-normal mb-4'>
+              <h1 className='text-3xl md:text-5xl font-normal mb-9'>
                 Services
               </h1>
-              <p className='mb-6 text-[#A6A6AB] md:text-lg leading-relaxed'>
+              <p className='mb-6 text-[#A6A6AB] md:text-md leading-relaxed'>
                 At Ampersand Hi~Tech, we deliver secure, scalable, and
                 high-performance solutions designed for businesses,
                 institutions, and closed communities. Explore how we can
@@ -206,7 +206,7 @@ export default function Services() {
         </div>
       </div>
 
-      <div className='w-full flex flex-col gap-7 p-4 sm:p-8 md:p-16'>
+      <div className='w-full mt-8 flex flex-col gap-7 p-4 sm:p-8 md:p-16'>
         <hr className='w-full bg-[#A6A6AB]/90 h-[1px]' />
         <DropdownSection
           title='High-Speed Internet Access'

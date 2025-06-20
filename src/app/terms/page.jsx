@@ -5,7 +5,7 @@ export default function Terms() {
   return (
     <div className='min-h-screen flex flex-col'>
       {/* Hero Section */}
-      <div className="relative w-full flex flex-col bg-[url('/background2.svg')] bg-cover bg-center h-screen">
+      <div className="relative w-full flex flex-col bg-[url('https://i.imgur.com/Chlm2UE.png')] bg-cover bg-center h-screen">
         <Header />
         <div className='flex flex-1'>
           {/* Left side - text content */}

@@ -3,38 +3,36 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const path = usePathname()
 
   return (
-    <div className='flex justify-between items-center px-9 py-4 text-white relative z-50'>
+    <div className='flex justify-between items-center px-14 py-4 text-white relative z-50'>
       {/* Logo Section */}
       <div className='flex items-center gap-3'>
         <Link href="/">
         <Image
-          src='/logo.svg'
+          src='/realLogo.svg'
           alt='Ampersand Logo'
           height={40}
-          width={40}
+          width={160}
           className='object-contain'
         />
         </Link>
-        <div className='flex flex-col'>
-          <h2 className='text-xl font-bold'>AMPERSAND</h2>
-          <p className='text-xs'>Hi~Technologies</p>
-        </div>
       </div>
 
       {/* Desktop Links */}
       <div className='hidden md:flex items-center gap-6'>
-        <Link href='/' className='hover:text-gray-300 transition-colors'>
+        <Link href='/' className={'hover:text-gray-300 transition-colors' + (path === '/' ? ' font-bold' : '')}>
           Home
         </Link>
-        <Link href='/about' className='hover:text-gray-300 transition-colors'>
+        <Link href='/about' className={'hover:text-gray-300 transition-colors' + (path === '/about' ? ' font-bold' : '')}>
           About us
         </Link>
-        <Link href='/services' className='hover:text-gray-300 transition-colors'>
+        <Link href='/services' className={'hover:text-gray-300 transition-colors' + (path === '/services' ? ' font-bold' : '')}>
           Services
         </Link>
         <Link href='/contact' className='hover:text-gray-300 transition-colors'>

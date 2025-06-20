@@ -6,16 +6,16 @@ export default function About() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
-         <div className="relative w-full flex flex-col bg-[url('/background2.svg')] bg-cover bg-center h-screen">
+         <div className="relative w-full flex flex-col bg-[url('https://i.imgur.com/Chlm2UE.png')] bg-cover bg-center h-screen">
         <Header />
         <div className='flex flex-1'>
           {/* Left side - text content */}
           <div className='w-full md:w-1/2 flex  justify-center p-4 md:p-8 absolute inset-0 bg-[#21252966]/40 text-white'>
-            <div className='max-w-lg mt-76 md:mt-74'>
-              <h1 className='text-3xl md:text-5xl font-normal mb-4'>
+            <div className='max-w-lg mt-76 md:mt-69'>
+              <h1 className='text-3xl md:text-6xl  mb-9'>
                 About us
               </h1>
-              <p className='mb-6 text-[#A6A6AB] md:text-lg leading-relaxed'>
+              <p className='mb-6 text-[#A6A6AB] md:text-md leading-relaxed'>
                 Building an excellent, innovative, and sustainable connected
                 Future—One Reliable Network at a Time.
               </p>
@@ -28,9 +28,10 @@ export default function About() {
 
       {/* Empowering Communities Section */}
       <div className="w-full flex flex-col gap-6 p-4 sm:p-8 md:p-16">
-        <h2 className="text-2xl sm:text-3xl text-[#424649] max-w-md">
-          Empowering Communities Through Innovation
-        </h2>
+         <div className="w-full md:w-[477px] p-1 text-[#424649] md:flex md:flex-col md:gap-1 font-normal text-2xl md:text-3xl">
+          Empowering 
+          <span>Communities Through Innovation</span>
+        </div>
         <div className="flex flex-col md:flex-row gap-6 md:gap-8">
           <Image
             src="/pic1.svg"
@@ -50,25 +51,25 @@ export default function About() {
       </div>
 
       {/* Mission & Vision Section */}
-      <div className="w-full flex flex-col md:flex-row gap-6 md:gap-12 p-4 sm:p-8 md:p-12 bg-[#F4F4F4]">
+      <div className="w-full flex flex-col md:flex-row gap-6 md:gap-12 p-4 sm:p-8 md:p-16 bg-[#F4F4F4]">
         <div className="flex flex-col max-w-full md:max-w-[515px] gap-2">
-          <h2 className="font-normal text-lg sm:text-xl text-[#424649]">
+          <h2 className="font-normal text-lg sm:text-3xl text-[#424649]">
             Our Mission
           </h2>
           <p className="text-[#424649] text-sm sm:text-base">
-            To connect, secure, and elevate communities through scalable,
-            sustainable, and future-ready technology infrastructure.
+            To <span className="font-bold">connect, secure, and elevate</span>  communities through <span className="font-bold">scalable,
+            sustainable, and future-ready</span> technology infrastructure.
           </p>
         </div>
         <hr className="bg-white h-px md:h-[130px] w-full md:w-1 my-4 md:my-0" />
         <div className="flex flex-col max-w-full md:max-w-[515px] gap-2">
-          <h2 className="font-normal text-lg sm:text-xl text-[#424649]">
+          <h2 className="font-normal text-lg sm:text-3xl text-[#424649]">
             Our Vision
           </h2>
           <p className="text-[#424649] text-sm sm:text-base">
-            A world where no one is left offline—where every business, home, and
-            organization has access to high-speed, resilient, and innovative
-            solutions that unlock growth.
+            A world where <span className="font-bold">no one is left offline—</span>where every business, home, and
+            organization has access to <span className="font-bold">high-speed, resilient, and innovative </span> 
+             solutions that unlock growth.
           </p>
         </div>
       </div>
@@ -80,6 +81,7 @@ export default function About() {
           alt="Nature"
           width={516}
           height={400}
+          priority
           className="w-full h-auto object-cover"
         />
       </div>

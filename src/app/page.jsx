@@ -7,22 +7,22 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <div className="relative w-full flex flex-col bg-[url('/background.svg')] bg-cover bg-center h-screen">
+      <div className="relative w-full flex flex-col bg-[url('https://i.imgur.com/bhZTEGq.png')] bg-cover bg-center h-screen">
         <Header />
         <div className="flex flex-1">
           {/* Left side - text content */}
           <div className="w-full md:w-1/2 flex items-center justify-center p-4 md:p-8 absolute inset-0 bg-[#21252966]/40 text-white">
-            <div className="max-w-lg mt-16 md:mt-30">
-              <h1 className="text-3xl md:text-4xl font-bold mb-4">
+            <div className="max-w-lg mt-33 md:mt-47">
+              <h1 className="text-3xl text-[#FFFFFF] md:w-[395px] md:text-5xl font-light mb-6">
                 Connecting Communities
               </h1>
-              <p className="mb-6 text-base md:text-lg leading-relaxed">
+              <p className="mb-6 md:mr-[50px] text-[#A6A6AB] md:text-md  leading-relaxed">
                 Ampersand Hi-Tech provides reliable internet and technology
                 solutions that connect and empower communities to build a better
                 future for individuals, businesses, and organizations to thrive
                 in the digital age.
               </p>
-              <button className="bg-white w-[228px] h-[57px] rounded-[40px] text-black px-6 py-2 font-medium shadow hover:bg-gray-200 transition">
+              <button className="bg-white w-[228px] h-[57px] rounded-[40px] text-[#212529] px-6 py-2 font-medium shadow hover:bg-gray-200 transition">
                 Talk To Our Team
               </button>
             </div>
@@ -34,20 +34,21 @@ export default function Home() {
 
       {/* Why Choose Section */}
       <div className="min-w-full flex flex-col gap-6 p-4 md:p-16">
-        <h1 className="text-2xl md:text-3xl text-[#212529]">
+        <h1 className="text-2xl w-full md:w-[720px] md:text-4xl text-[#212529]">
           Why Choose Ampersand Hi~Tech?
         </h1>
-        <p className="w-full md:w-[520px] text-sm md:text-md text-[#424649]">
+        <p className="w-full md:w-[650px] text-sm md:text-[15px] text-[#424649]">
           Whether for small or large-scale projects, we are committed to
           delivering cutting-edge results, contributing to a more sustainable
           and innovative internet infrastructure.
         </p>
         <div className="flex flex-col md:flex-row justify-between gap-4">
           <Image
-            src="/dish.svg"
+            src="/antenna.png"
             alt="Dish"
             height={370}
             width={360}
+            priority
             className="w-full md:w-1/3 object-cover"
           />
           <Image
@@ -55,6 +56,7 @@ export default function Home() {
             alt="Chip"
             height={370}
             width={360}
+            priority
             className="w-full md:w-1/3 object-cover"
           />
           <Image
@@ -62,6 +64,7 @@ export default function Home() {
             alt="Woman"
             height={370}
             width={360}
+            priority
             className="w-full md:w-1/3 object-cover"
           />
         </div>
@@ -69,9 +72,10 @@ export default function Home() {
 
       {/* Service Categories Section */}
       <div className="min retor-w-full flex flex-col md:flex-row py-8 px-4 md:px-16 justify-between gap-6">
-        <h1 className="w-full md:w-[477px] p-1 text-[#212529] font-normal text-3xl md:text-5xl">
-          Our Service Categories
-        </h1>
+        <div className="w-full md:w-[477px] p-1 text-[#212529] md:flex md:flex-col md:gap-2 font-normal text-3xl md:text-4xl">
+          Our 
+          <span> Service Categories</span>
+        </div>
         <div className="flex flex-col gap-5 text-[#424649] w-full md:w-[800px]">
           <p className="text-sm md:text-base">
             Leading the market for two decades, we have been experts in energy
@@ -89,11 +93,11 @@ export default function Home() {
       </div>
 
       {/* Grid Section */}
-      <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-4 gap-4 px-4 md:px-16">
+      <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-4 gap-4 px-4 mb-19 md:mb-33 md:px-16">
         <div className="col-span-1 md:col-span-2 bg-[url('/first.svg')] bg-cover bg-center p-4 rounded-3xl h-[200px] md:h-[300px]"></div>
         <div className="bg-[url('/second.svg')] bg-cover bg-center p-4 rounded-3xl h-[200px] md:h-[300px]"></div>
-        <div className="bg-[url('/third.png')] bg-cover bg-center p-4 rounded-3xl h-[200px] md:h-[300px]"></div>
-        <div className="bg-[url('/fourth.svg')] bg-cover bg-center p-4 col-span-1 md:col-span-2 rounded-3xl h-[200px] md:h-[300px]"></div>
+        <div className="bg-[url('/first.png')] bg-cover bg-center p-4 rounded-3xl h-[200px] md:h-[300px]"></div>
+        <div className="bg-[url('/second.png')] bg-cover bg-center p-4 col-span-1 md:col-span-2 rounded-3xl h-[200px] md:h-[300px]"></div>
         <div className="bg-[url('/fifth.svg')] bg-cover bg-center p-4 col-span-1 md:col-span-2 rounded-3xl h-[200px] md:h-[300px]"></div>
         <div className="bg-[url('/sixth.svg')] bg-cover bg-center p-4 rounded-3xl h-[200px] md:h-[300px]"></div>
         <div className="bg-[url('/seventh.svg')] bg-cover bg-center p-4 rounded-3xl h-[200px] md:h-[300px]"></div>
@@ -101,13 +105,13 @@ export default function Home() {
       </div>
 
       {/* Deep Knowledge Section */}
-      <div className="min-w-full flex flex-col md:flex-row justify-center items-center py-8 px-4 md:px-16 gap-6 md:gap-8 bg-[#f4f4f4]">
+      <div className="min-w-full flex flex-col md:flex-row justify-center items-center md:mt-11  px-4 md:px-16 gap-6 md:gap-8 bg-[#f4f4f4]">
         <Image
           src="/9.svg"
           alt="Deep Knowledge"
           height={624.519287109375}
           width={394.96484375}
-          className="w-full md:w-1/3 object-cover"
+          className="w-full md:w-1/3 relative md:-top-12 object-cover"
         />
         <div className="text-[#212529] flex flex-col gap-5">
           <h1 className="font-normal text-2xl md:text-3xl">
@@ -160,7 +164,7 @@ export default function Home() {
           collaborate, and provide you with tailored solutions that align with
           your specific needs and goals.
         </p>
-        <Link href="/contact-us" className="flex items-center gap-2 text-[#424649] hover:underline">
+        <Link href="/contact" className="flex items-center gap-2 text-[#424649] hover:underline">
           Contact us
           <Image src="/arrow.svg" alt="Arrow" width={10} height={10} />
         </Link>
