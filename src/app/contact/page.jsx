@@ -26,7 +26,7 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className='max-w-6xl mx-auto px-2 py-17 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-1'>
+      <div className='max-w-6xl mx-auto px-2 py-17 md:mb-[50px] grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-1'>
         {/* Left: Location & Open hours */}
         <div className='space-y-8'>
           <div>
@@ -48,7 +48,7 @@ export default function Contact() {
         </div>
 
         {/* Right: Contact Form */}
-        <form className='space-y-4'>
+        <form className='space-y-4 md:-ml-[100px]'>
           <h1 className='text-4xl font-normal'>Form</h1>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <input
@@ -89,7 +89,7 @@ export default function Contact() {
 
           <button
             type='submit'
-            className='bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800'
+            className='bg-black text-white hover:text-black transition-all duration-300 px-6 py-2 rounded-full hover:bg-gray-300 cursor-pointer'
           >
             Send
           </button>
@@ -128,16 +128,16 @@ export default function Contact() {
               name='firstName'
               id='firstName'
               placeholder='First Name'
-              className='w-full md:w-[138px] bg-[#1F1F1F] text-[#757575] h-[42px] p-3 rounded'
+              className='w-full md:w-[138px] bg-[#1F1F1F] text-[#757575] h-[42px] p-3 rounded-[10px]'
             />
             <input
               type='email'
               name='email'
               id='email'
               placeholder='Email'
-              className='w-full md:w-[255px] bg-[#1F1F1F] text-[#757575] h-[42px] p-3 rounded'
+              className='w-full md:w-[255px] bg-[#1F1F1F] text-[#757575] h-[42px] p-3 rounded-[10px]'
             />
-            <button className='bg-[#eadede] rounded-2xl w-full md:w-[105px] px-4 py-2 hover:opacity-30'>
+            <button className='bg-white rounded-2xl w-full md:w-[105px] px-4 py-2 cursoer-pointer'>
               Subscribe
             </button>
           </div>

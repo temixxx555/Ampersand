@@ -15,7 +15,7 @@ export default function About() {
               <h1 className='text-3xl md:text-6xl  mb-9'>
                 About us
               </h1>
-              <p className='mb-6 text-[#A6A6AB] md:text-md leading-relaxed'>
+              <p className='mb-6 text-[#A6A6AB] md:text-[17px] leading-relaxed'>
                 Building an excellent, innovative, and sustainable connected
                 Future—One Reliable Network at a Time.
               </p>
@@ -34,13 +34,13 @@ export default function About() {
         </div>
         <div className="flex flex-col md:flex-row gap-6 md:gap-8">
           <Image
-            src="/pic1.svg"
+            src="/business.svg"
             alt="Innovation"
             width={516}
             height={400}
             className="w-full md:w-1/2 h-auto object-cover"
           />
-          <p className="text-[#424649] text-sm sm:text-base md:text-md max-w-full md:max-w-[514px]">
+          <p className="text-[#424649] text-sm sm:text-base md:text-[17px] max-w-full md:max-w-[514px]">
             At Ampersand Hi-Tech, we are driven by a mission to bridge gaps and
             foster connections through cutting-edge technology. With deep roots
             in the industry, our team of experienced consultants and engineers
@@ -51,7 +51,7 @@ export default function About() {
       </div>
 
       {/* Mission & Vision Section */}
-      <div className="w-full flex flex-col md:flex-row gap-6 md:gap-12 p-4 sm:p-8 md:p-16 bg-[#F4F4F4]">
+      <div className="w-full flex flex-col md:flex-row gap-6 md:gap-12 p-4 sm:p-8 md:p-14 bg-[#F4F4F4]">
         <div className="flex flex-col max-w-full md:max-w-[515px] gap-2">
           <h2 className="font-normal text-lg sm:text-3xl text-[#424649]">
             Our Mission
@@ -61,7 +61,7 @@ export default function About() {
             sustainable, and future-ready</span> technology infrastructure.
           </p>
         </div>
-        <hr className="bg-white h-px md:h-[130px] w-full md:w-1 my-4 md:my-0" />
+        <hr className="bg-white h-px md:h-[150px] w-full md:w-1 my-4 md:my-0" />
         <div className="flex flex-col max-w-full md:max-w-[515px] gap-2">
           <h2 className="font-normal text-lg sm:text-3xl text-[#424649]">
             Our Vision
@@ -87,8 +87,8 @@ export default function About() {
       </div>
 
       {/* Innovation Section */}
-      <div className="w-full flex flex-col md:flex-row gap-6 md:gap-12 p-4 sm:p-8 md:p-16 bg-[#F4F4F4]">
-        <div className="max-w-full md:max-w-[458px]">
+      <div className="w-full flex flex-col md:flex-row gap-6 md:gap-12  p-4 sm:p-8 md:p-16 bg-[#F4F4F4]">
+        <div className="max-w-full md:px-4 md:max-w-[458px]">
           <p className="text-[#424649] text-sm sm:text-base">
             From day one, <span className="font-bold">Ampersand Hi~Tech</span> has
             been built on a foundation of{" "}

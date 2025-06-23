@@ -12,17 +12,17 @@ export default function Home() {
         <div className="flex flex-1">
           {/* Left side - text content */}
           <div className="w-full md:w-1/2 flex items-center justify-center p-4 md:p-8 absolute inset-0 bg-[#21252966]/40 text-white">
-            <div className="max-w-lg mt-33 md:mt-47">
+            <div className="max-w-lg z-10 mt-33 md:mt-47">
               <h1 className="text-3xl text-[#FFFFFF] md:w-[395px] md:text-5xl font-light mb-6">
                 Connecting Communities
               </h1>
-              <p className="mb-6 md:mr-[50px] text-[#A6A6AB] md:text-md  leading-relaxed">
+              <p className="mb-6 md:mr-[50px] text-[#A6A6AB] md:text-[15px]  leading-relaxed">
                 Ampersand Hi-Tech provides reliable internet and technology
                 solutions that connect and empower communities to build a better
                 future for individuals, businesses, and organizations to thrive
                 in the digital age.
               </p>
-              <button className="bg-white w-[228px] h-[57px] rounded-[40px] text-[#212529] px-6 py-2 font-medium shadow hover:bg-gray-200 transition">
+              <button className="bg-white w-[228px] h-[57px] rounded-[40px] text-[#212529] px-6 py-2 font-medium shadow hover:bg-black hover:text-white cursor-pointer transition-colors duration-300">
                 Talk To Our Team
               </button>
             </div>
@@ -34,7 +34,7 @@ export default function Home() {
 
       {/* Why Choose Section */}
       <div className="min-w-full flex flex-col gap-6 p-4 md:p-16">
-        <h1 className="text-2xl w-full md:w-[720px] md:text-4xl text-[#212529]">
+        <h1 className="text-xl w-full md:w-[720px] md:text-4xl text-[#212529]">
           Why Choose Ampersand Hi~Tech?
         </h1>
         <p className="w-full md:w-[650px] text-sm md:text-[15px] text-[#424649]">
@@ -136,16 +136,16 @@ export default function Home() {
               name="firstName"
               id="firstName"
               placeholder="First Name"
-              className="w-full md:w-[138px] bg-[#1F1F1F] text-[#757575] h-[42px] p-3 rounded"
+              className="w-full md:w-[138px] bg-[#1F1F1F] text-[#757575] h-[42px] p-3 rounded-[10px]"
             />
             <input
               type="email"
               name="email"
               id="email"
               placeholder="Email"
-              className="w-full md:w-[255px] bg-[#1F1F1F] text-[#757575] h-[42px] p-3 rounded"
+              className="w-full md:w-[255px] bg-[#1F1F1F] text-[#757575] h-[42px] p-3 rounded-[10px]"
             />
-            <button className="bg-[#eadede] rounded-2xl w-full md:w-[105px] px-4 py-2 hover:opacity-30">
+            <button className="bg-white rounded-2xl w-full md:w-[105px] px-4 py-2 hover:opacity-30">
               Subscribe
             </button>
           </div>
@@ -153,20 +153,20 @@ export default function Home() {
       </div>
 
       {/* Get in Touch Section */}
-      <div className="min-w-full flex py-8 px-4 md:px-16 gap-6 flex-col">
+      <div className="min-w-full flex py-8 md:mt-10 px-4 md:px-16 gap-6 flex-col">
         <h1 className="text-[#212529] text-3xl md:text-[40px]">
           Get in touch with us
         </h1>
-        <p className="text-[#424649] w-full md:w-[600px] text-sm md:text-base">
+        <p className="text-[#424649] w-full md:w-[600px] text-sm md:text-[14px]">
           If you're ready to explore how our expertise in energy efficiency, LED
           lighting, photovoltaic energy, and electric mobility can benefit your
           projects, don't hesitate to reach out. We're here to listen,
           collaborate, and provide you with tailored solutions that align with
           your specific needs and goals.
         </p>
-        <Link href="/contact" className="flex items-center gap-2 text-[#424649] hover:underline">
+        <Link href="/contact" className="flex items-center gap-2 hover:gap-3 transition duration-300 text-[#212529] hover:underline ">
           Contact us
-          <Image src="/arrow.svg" alt="Arrow" width={10} height={10} />
+          <Image src="/arrow.svg" alt="Arrow" width={10} height={10} className="text-[#212529] " />
         </Link>
       </div>
 

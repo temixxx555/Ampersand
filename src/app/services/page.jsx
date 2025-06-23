@@ -146,7 +146,7 @@ const DropdownSection = ({ title, content }) => {
       </div>
       {/* Conditionally render the dropdown content */}
       {isOpen && (
-        <div className='text-[#212529] text-sm sm:text-base'>
+        <div className='text-[#212529] text-sm sm:text-base transition-all duration-300 ease-in-out'>
           <ul className='list-disc pl-5 space-y-2'>
             {content.map((item, index) => (
               <li key={index} dangerouslySetInnerHTML={{ __html: item }} />
@@ -248,8 +248,8 @@ export default function Services() {
         />
       </div>
 
-      <div className='w-full flex flex-col gap-6 p-16 text-[#424649]'>
-        <h1 className='text-4xl text-black'>Why partner with us?</h1>
+      <div className='w-full flex flex-col gap-6 p-4 md:p-16 text-[#424649]'>
+        <h1 className='text-2xl md:text-4xl text-black'>Why partner with us?</h1>
         <div className='flex flex-col gap-2'>
           <p>
             <span className='font-bold'>20+ Years of Expertise -</span> Trusted
