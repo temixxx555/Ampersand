@@ -101,7 +101,7 @@ export default function Home() {
         <div className="bg-[url('/sixth.svg')] md:bg-[url('/fifth.svg')] bg-cover bg-center p-4 col-span-1 md:col-span-2 rounded-3xl h-[200px] md:h-[300px]"></div>
         <div className="bg-[url('/fifth.svg')] md:bg-[url('/sixth.svg')] bg-cover bg-center p-4 rounded-3xl h-[200px] md:h-[300px]"></div>
         <div className="bg-[url('/first13.png')] bg-cover bg-center p-4 rounded-3xl h-[200px] md:h-[300px]"></div>
-        <div className="bg-[url('/eight.svg')] bg-cover bg-center p-4 col-span-1 md:col-span-2 rounded-3xl h-[200px] md:h-[300px]"></div>
+        <div className="bg-[url('/eight.png')] bg-cover bg-center p-4 col-span-1 md:col-span-2 rounded-3xl h-[200px] md:h-[300px]"></div>
       </div>
 
       {/* Deep Knowledge Section */}
