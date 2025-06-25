@@ -98,7 +98,7 @@ export default function Footer() {
       </div>
 
       {/* Powered By Section */}
-      <div className='container mx-auto px-4 mt-6 text-right'>
+      <div className='container mx-auto px-4 mt-6 text-left md:text-right'>
         <a
           href='https://www.intplus.co'
           target='_blank'
