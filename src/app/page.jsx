@@ -40,7 +40,7 @@ export default function Home() {
         <p className="w-full md:w-[650px] text-sm md:text-[15px] text-[#424649]">
           Whether for small or large-scale projects, we are committed to
           delivering cutting-edge results, contributing to a more sustainable
-          and innovative internet infrastructure.
+          and innovative Network infrastructure.
         </p>
         <div className="flex flex-col md:flex-row justify-between gap-4">
           <Image
@@ -72,7 +72,7 @@ export default function Home() {
 
       {/* Service Categories Section */}
       <div className="min retor-w-full flex flex-col md:flex-row py-8 px-4 md:px-16 justify-between gap-6">
-        <div className="w-full md:w-[477px] p-1 text-[#212529] md:flex md:flex-col md:gap-2 font-normal text-3xl md:text-4xl">
+        <div className="w-full md:w-[477px] p-1 text-[#212529] md:flex md:flex-col md:gap-2 font-normal text-2xl md:text-4xl">
           Our 
           <span> Service Categories</span>
         </div>
@@ -94,13 +94,13 @@ export default function Home() {
 
       {/* Grid Section */}
       <div className="grid grid-cols-1 md:grid-cols-3 grid-rows-4 gap-4 px-4 mb-19 md:mb-33 md:px-16">
-        <div className="col-span-1 md:col-span-2 bg-[url('/first.svg')] bg-cover bg-center p-4 rounded-3xl h-[200px] md:h-[300px]"></div>
-        <div className="bg-[url('/second.svg')] bg-cover bg-center p-4 rounded-3xl h-[200px] md:h-[300px]"></div>
-        <div className="bg-[url('/first.png')] bg-cover bg-center p-4 rounded-3xl h-[200px] md:h-[300px]"></div>
+        <div className="col-span-1 md:col-span-2 bg-[url('/first1.png')] md:bg-[url('/first.svg')] bg-cover bg-center p-4 rounded-3xl h-[200px] md:h-[300px]"></div>
+        <div className="bg-[url('/first.svg')] md:bg-[url('/first1.png')] bg-cover bg-center p-4 rounded-3xl h-[200px] md:h-[300px]"></div>
+        <div className="bg-[url('/first12.png')] bg-cover bg-center p-4 rounded-3xl h-[200px] md:h-[300px]"></div>
         <div className="bg-[url('/second.png')] bg-cover bg-center p-4 col-span-1 md:col-span-2 rounded-3xl h-[200px] md:h-[300px]"></div>
-        <div className="bg-[url('/fifth.svg')] bg-cover bg-center p-4 col-span-1 md:col-span-2 rounded-3xl h-[200px] md:h-[300px]"></div>
-        <div className="bg-[url('/sixth.svg')] bg-cover bg-center p-4 rounded-3xl h-[200px] md:h-[300px]"></div>
-        <div className="bg-[url('/seventh.svg')] bg-cover bg-center p-4 rounded-3xl h-[200px] md:h-[300px]"></div>
+        <div className="bg-[url('/sixth.svg')] md:bg-[url('/fifth.svg')] bg-cover bg-center p-4 col-span-1 md:col-span-2 rounded-3xl h-[200px] md:h-[300px]"></div>
+        <div className="bg-[url('/fifth.svg')] md:bg-[url('/sixth.svg')] bg-cover bg-center p-4 rounded-3xl h-[200px] md:h-[300px]"></div>
+        <div className="bg-[url('/first13.png')] bg-cover bg-center p-4 rounded-3xl h-[200px] md:h-[300px]"></div>
         <div className="bg-[url('/eight.svg')] bg-cover bg-center p-4 col-span-1 md:col-span-2 rounded-3xl h-[200px] md:h-[300px]"></div>
       </div>
 

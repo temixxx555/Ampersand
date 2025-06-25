@@ -105,8 +105,8 @@ const Modal = ({ isOpen, onClose, title, children }) => {
   if (!isOpen) return null;
 
   return (
-    <div className='fixed inset-0 bg-white bg-opacity-50 flex items-center justify-center z-50'>
-      <div className='bg-white rounded-lg p-6 max-w-md w-full relative'>
+    <div onClick={onClose} className='fixed inset-0 bg-white md:bg-transparent bg-opacity-50 flex items-center justify-center z-50'>
+      <div onClick={(e) => e.stopPropagation()} className='bg-white rounded-lg p-6 max-w-md w-full relative'>
         <button
           onClick={onClose}
           className='absolute top-2 right-2 text-gray-600 text-xl'

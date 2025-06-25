@@ -10,7 +10,7 @@ export default function Header() {
   const path = usePathname()
 
   return (
-    <div className='flex justify-between items-center px-14 py-4 text-white relative z-50'>
+    <div className='flex justify-between items-center px-4 md:px-14 py-4 text-white relative z-50'>
       {/* Logo Section */}
       <div className='flex items-center gap-3'>
         <Link href="/">
