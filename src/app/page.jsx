@@ -2,6 +2,7 @@ import Header from "@/compnents/Header";
 import Image from "next/image";
 import Link from "next/link"; // Added for navigation links
 import Footer from "@/compnents/Footer";
+import Subscribe from "@/compnents/subscribe";
 
 export default function Home() {
   return (
@@ -130,25 +131,7 @@ export default function Home() {
           <p className="text-[#424649] text-sm md:text-base">
             Subscribe to our newsletter
           </p>
-          <div className="flex flex-col md:flex-row gap-3">
-            <input
-              type="text"
-              name="firstName"
-              id="firstName"
-              placeholder="First Name"
-              className="w-full md:w-[138px] bg-[#1F1F1F] text-[#757575] h-[42px] p-3 rounded-[10px]"
-            />
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email"
-              className="w-full md:w-[255px] bg-[#1F1F1F] text-[#757575] h-[42px] p-3 rounded-[10px]"
-            />
-            <button className="bg-white rounded-2xl w-full md:w-[105px] px-4 py-2 hover:opacity-30">
-              Subscribe
-            </button>
-          </div>
+         <Subscribe />
         </div>
       </div>
 

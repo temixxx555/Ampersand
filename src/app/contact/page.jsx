@@ -1,8 +1,52 @@
+"use client";
 import Footer from "@/compnents/Footer";
 import Header from "@/compnents/Header";
+import Subscribe from "@/compnents/subscribe";
+import { Loader } from "lucide-react";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Contact() {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phonenumber: "",
+    organization: "",
+    service: "",
+    community: "",
+    message: "",
+  });
+  const [loading, setIsLoading] = useState(false);
+  const [agreed, setAgreed] = useState(true);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+   if(!agreed){
+    return alert("You havent agreed ")
+   }
+   if(!form.name || form.email){
+    return 
+   }
+
+    setIsLoading(true);
+    const url =
+      "https://script.google.com/macros/s/AKfycbxM5BIjtXhodQkEJ4p3KFk03Q2AJrdn7Ps8lcX6Lv8M9KSXjJeHrN63THQFvLjzOLybSw/exec";
+    fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: `name=${form.name}&email=${form.email}&phonenumber=${form.phonenumber}&organization=${form.organization}&service=${form.service}&community=${form.community}&message=${form.message}`,
+    })
+      .then((res) => res.text())
+      .then((data) => {
+        setIsLoading(false);
+        window.location.reload();
+        alert("sent");
+      })
+      .catch((error) => {
+        console.log(error);
+        setIsLoading(false);
+      });
+  };
   return (
     <div className='min-h-screen flex flex-col'>
       {/* Hero Section */}
@@ -48,38 +92,57 @@ export default function Contact() {
         </div>
 
         {/* Right: Contact Form */}
-        <form className='space-y-4 md:-ml-[100px]'>
+        <form className='space-y-4 md:-ml-[100px]' onSubmit={handleSubmit}>
           <h1 className='text-4xl font-normal'>Form</h1>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <input
               type='text'
+              value={form.name}
+              onChange={(e) => setForm({ ...form, name: e.target.value })}
               placeholder='Name'
+              required
               className=' border border-[#F4F4F4] focus:outline-none p-2 rounded w-full'
             />
             <input
+              value={form.email}
+              onChange={(e) => setForm({ ...form, email: e.target.value })}
               type='email'
+              required
               placeholder='Email'
               className='border border-[#F4F4F4] focus:outline-none p-2 rounded w-full'
             />
             <input
+              value={form.phonenumber}
+              onChange={(e) =>
+                setForm({ ...form, phonenumber: e.target.value })
+              }
               type='text'
+              required
               placeholder='Phone number'
               className='border border-[#F4F4F4] focus:outline-none p-2 rounded w-full'
             />
             <input
+              value={form.organization}
+              onChange={(e) =>
+                setForm({ ...form, organization: e.target.value })
+              }
               type='text'
+              required
               placeholder='Company (optional)'
               className='border border-[#F4F4F4] focus:outline-none p-2 rounded w-full'
             />
           </div>
 
           <textarea
+            value={form.message}
+            onChange={(e) => setForm({ ...form, message: e.target.value })}
             placeholder='Message'
+            required
             className='border border-[#F4F4F4] focus:outline-none p-2 rounded w-full h-28 resize-none'
           ></textarea>
 
           <div className='flex items-start gap-2'>
-            <input type='checkbox' className='mt-1' defaultChecked />
+            <input type='checkbox' className='mt-1' checked={agreed} onChange={(e)=>setAgreed(e.target.checked)} />
             <p className='text-sm text-gray-700'>
               I agree to allow Ampersand Hi~Tech to store and process my
               information in accordance with data protection regulations for the
@@ -89,9 +152,10 @@ export default function Contact() {
 
           <button
             type='submit'
+            disabled={loading}
             className='bg-black text-white hover:text-black transition-all duration-300 px-6 py-2 rounded-full hover:bg-gray-300 cursor-pointer'
           >
-            Send
+             {loading ? <Loader className='animate-spin' /> : "Send"}
           </button>
         </form>
       </div>
@@ -122,25 +186,7 @@ export default function Contact() {
           <p className='text-[#424649] text-sm md:text-base'>
             Subscribe to our newsletter
           </p>
-          <div className='flex flex-col md:flex-row gap-3'>
-            <input
-              type='text'
-              name='firstName'
-              id='firstName'
-              placeholder='First Name'
-              className='w-full md:w-[138px] bg-[#1F1F1F] text-[#757575] h-[42px] p-3 rounded-[10px]'
-            />
-            <input
-              type='email'
-              name='email'
-              id='email'
-              placeholder='Email'
-              className='w-full md:w-[255px] bg-[#1F1F1F] text-[#757575] h-[42px] p-3 rounded-[10px]'
-            />
-            <button className='bg-white rounded-2xl w-full md:w-[105px] px-4 py-2 cursoer-pointer'>
-              Subscribe
-            </button>
-          </div>
+          <Subscribe />
         </div>
       </div>
 

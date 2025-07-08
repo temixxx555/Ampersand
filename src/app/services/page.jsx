@@ -2,40 +2,95 @@
 import Footer from "@/compnents/Footer";
 import Header from "@/compnents/Header";
 import axios from "axios";
+import { Loader, TruckElectric } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 const ContactForm = () => {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phonenumber: "",
+    organization: "",
+    service: "",
+    community: "",
+    message: "",
+  });
+  const [loading, setIsLoading] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("clicked");
+
+    setIsLoading(true);
+    const url =
+      "https://script.google.com/macros/s/AKfycbxM5BIjtXhodQkEJ4p3KFk03Q2AJrdn7Ps8lcX6Lv8M9KSXjJeHrN63THQFvLjzOLybSw/exec";
+    fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: `name=${form.name}&email=${form.email}&phonenumber=${form.phonenumber}&organization=${form.organization}&service=${form.service}&community=${form.community}&message=${form.message}`,
+    })
+      .then((res) => res.text())
+      .then((data) => {
+        setIsLoading(false);
+        window.location.reload();
+        alert("sent")
+      })
+      .catch((error) => {
+        console.log(error);
+        setIsLoading(false)
+        
+      });
+  };
   return (
-    <form className='space-y-4'>
+    <form className='space-y-4' onSubmit={handleSubmit}>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-[500px] '>
         <input
           type='text'
+          required
+          value={form.name}
+          onChange={(e) => setForm({ ...form, name: e.target.value })}
           placeholder='Name'
           className='border border-[#F4F4F4] focus:outline-none w-full p-2 rounded '
         />
         <input
+        required
           type='email'
+          value={form.email}
+          onChange={(e) => setForm({ ...form, email: e.target.value })}
           placeholder='Email'
           className='border border-[#F4F4F4] focus:outline-none  w-full p-2 rounded '
         />
         <input
+        required
           type='text'
+          value={form.phonenumber}
+          onChange={(e) => setForm({ ...form, phonenumber: e.target.value })}
           placeholder='Phone number'
           className='border border-[#F4F4F4] focus:outline-none p-2 rounded w-full'
         />
         <input
+        required
           type='text'
+          value={form.organization}
+          onChange={(e) => setForm({ ...form, organization: e.target.value })}
           placeholder='Company(optional)'
           className='border border-[#F4F4F4] focus:outline-none p-2 rounded w-full'
         />
       </div>
       <input
+      required
         type='text'
+        value={form.community}
+        onChange={(e) => setForm({ ...form, community: e.target.value })}
         placeholder='Subject'
         className='border border-[#F4F4F4] focus:outline-none p-2 rounded w-full'
       />
 
       <textarea
+      required
+        value={form.message}
+        onChange={(e) => setForm({ ...form, message: e.target.value })}
         placeholder='Additional information'
         className='border border-[#F4F4F4] focus:outline-none p-2 rounded w-full h-28 resize-none'
       ></textarea>
@@ -43,8 +98,9 @@ const ContactForm = () => {
       <button
         type='submit'
         className='bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800'
+        disabled={loading}
       >
-        Send
+        {loading ? <Loader className='animate-spin' /> : "Send"}
       </button>
     </form>
   );
@@ -57,27 +113,35 @@ const QuoteForm = () => {
     organization: "",
     service: "",
     community: "",
-    message:"",
+    message: "",
   });
+  const [loading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-   try {
-     const { data } = await axios.post(
-       "https://script.google.com/macros/s/AKfycbwfoV9QZjJ02QTcRDgUGwyWG4FPVybiW8QRz679vBTJK28cozq4QaSLrSSYjQuoW23tgA/exec",
-        form 
-     );
-     console.log(data);
-   } catch (error) {
-    console.log(error);
-    
-   }
+    console.log("clicked");
+
+    setIsLoading(true);
+    const url =
+      "https://script.google.com/macros/s/AKfycbxM5BIjtXhodQkEJ4p3KFk03Q2AJrdn7Ps8lcX6Lv8M9KSXjJeHrN63THQFvLjzOLybSw/exec";
+    fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: `name=${form.name}&email=${form.email}&phonenumber=${form.phonenumber}&organization=${form.organization}&service=${form.service}&community=${form.community}&message=${form.message}`,
+    })
+      .then((res) => res.text())
+      .then((data) => {
+        setIsLoading(false);
+        window.location.reload();
+      })
+      .catch((error) => console.log(error));
   };
   return (
     <form className='space-y-4' onSubmit={handleSubmit}>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-[500px] '>
         <input
           type='text'
+          required
           placeholder='Name'
           value={form.name}
           onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -85,6 +149,7 @@ const QuoteForm = () => {
         />
         <input
           type='email'
+          required
           placeholder='Email'
           value={form.email}
           onChange={(e) => setForm({ ...form, email: e.target.value })}
@@ -92,6 +157,7 @@ const QuoteForm = () => {
         />
         <input
           type='text'
+          required
           placeholder='Phone number'
           value={form.phonenumber}
           onChange={(e) => setForm({ ...form, phonenumber: e.target.value })}
@@ -99,6 +165,7 @@ const QuoteForm = () => {
         />
         <input
           type='text'
+          required
           value={form.organization}
           onChange={(e) => setForm({ ...form, organization: e.target.value })}
           placeholder='Organization'
@@ -127,6 +194,8 @@ const QuoteForm = () => {
       </div>
 
       <textarea
+        value={form.message}
+        onChange={(e) => setForm({ ...form, message: e.target.value })}
         placeholder='Additional information'
         className='border border-[#F4F4F4] focus:outline-none p-2 rounded w-full h-28 resize-none'
       ></textarea>
@@ -134,8 +203,9 @@ const QuoteForm = () => {
       <button
         type='submit'
         className='bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800'
+        disabled={loading}
       >
-        Send
+        {loading ? <Loader className='animate-spin' /> : "Send"}
       </button>
     </form>
   );
