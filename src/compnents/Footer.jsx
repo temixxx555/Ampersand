@@ -20,9 +20,9 @@ export default function Footer() {
             <div className='flex flex-col gap-1'>
               <h2 className='text-2xl font-normal'>AMPERSAND</h2>
               <p className='mb-2 text-white/30'>Hi~Technologies</p>
-              <p>info@ampersandhitech.com</p>
-              <p>0701 234 5678</p>
-              <p>0800 1000 3456</p>
+              <p>enq@ampersandhitech.com</p>
+              {/* <p>0701 234 5678</p> */}
+              <p>+2349014231868</p>
             </div>
           </div>
           <p className='text-xs mt-3'>© 2025 Ampersand HI-Tech</p>
