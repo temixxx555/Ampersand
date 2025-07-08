@@ -1,6 +1,7 @@
 "use client";
 import Footer from "@/compnents/Footer";
 import Header from "@/compnents/Header";
+import axios from "axios";
 import Image from "next/image";
 import { useState } from "react";
 const ContactForm = () => {
@@ -49,36 +50,75 @@ const ContactForm = () => {
   );
 };
 const QuoteForm = () => {
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phonenumber: "",
+    organization: "",
+    service: "",
+    community: "",
+    message:"",
+  });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+   try {
+     const { data } = await axios.post(
+       "https://script.google.com/macros/s/AKfycbwfoV9QZjJ02QTcRDgUGwyWG4FPVybiW8QRz679vBTJK28cozq4QaSLrSSYjQuoW23tgA/exec",
+        form 
+     );
+     console.log(data);
+   } catch (error) {
+    console.log(error);
+    
+   }
+  };
   return (
-    <form className='space-y-4'>
+    <form className='space-y-4' onSubmit={handleSubmit}>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4 w-[500px] '>
         <input
           type='text'
           placeholder='Name'
+          value={form.name}
+          onChange={(e) => setForm({ ...form, name: e.target.value })}
           className='border border-[#F4F4F4] focus:outline-none w-full p-2 rounded '
         />
         <input
           type='email'
           placeholder='Email'
+          value={form.email}
+          onChange={(e) => setForm({ ...form, email: e.target.value })}
           className='border border-[#F4F4F4] focus:outline-none  w-full p-2 rounded '
         />
         <input
           type='text'
           placeholder='Phone number'
+          value={form.phonenumber}
+          onChange={(e) => setForm({ ...form, phonenumber: e.target.value })}
           className='border border-[#F4F4F4] focus:outline-none p-2 rounded w-full'
         />
         <input
           type='text'
+          value={form.organization}
+          onChange={(e) => setForm({ ...form, organization: e.target.value })}
           placeholder='Organization'
           className='border border-[#F4F4F4] focus:outline-none p-2 rounded w-full'
         />
-        <select className='border border-[#F4F4F4] focus:outline-none text-[#A6A6AB] p-2 rounded w-full'>
+        <select
+          value={form.service}
+          onChange={(e) => setForm({ ...form, service: e.target.value })}
+          className='border border-[#F4F4F4] focus:outline-none text-[#A6A6AB] p-2 rounded w-full'
+        >
           <option>Service</option>
           <option>Web Development</option>
           <option>App Development</option>
           <option>UI/UX Design</option>
         </select>
-        <select className='border border-[#F4F4F4] focus:outline-none text-[#A6A6AB] p-2 rounded w-full'>
+        <select
+          value={form.community}
+          onChange={(e) => setForm({ ...form, community: e.target.value })}
+          className='border border-[#F4F4F4] focus:outline-none text-[#A6A6AB] p-2 rounded w-full'
+        >
           <option>Community</option>
           <option>Students</option>
           <option>Startups</option>
@@ -105,8 +145,14 @@ const Modal = ({ isOpen, onClose, title, children }) => {
   if (!isOpen) return null;
 
   return (
-    <div onClick={onClose} className='fixed inset-0 bg-white md:bg-transparent bg-opacity-50 flex items-center justify-center z-50'>
-      <div onClick={(e) => e.stopPropagation()} className='bg-white rounded-lg p-6 max-w-md w-full relative'>
+    <div
+      onClick={onClose}
+      className='fixed inset-0 bg-white md:bg-transparent bg-opacity-50 flex items-center justify-center z-50'
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className='bg-white rounded-lg p-6 max-w-md w-full relative'
+      >
         <button
           onClick={onClose}
           className='absolute top-2 right-2 text-gray-600 text-xl'
@@ -249,7 +295,9 @@ export default function Services() {
       </div>
 
       <div className='w-full flex flex-col gap-6 p-4 md:p-16 text-[#424649]'>
-        <h1 className='text-2xl md:text-4xl text-black'>Why partner with us?</h1>
+        <h1 className='text-2xl md:text-4xl text-black'>
+          Why partner with us?
+        </h1>
         <div className='flex flex-col gap-2'>
           <p>
             <span className='font-bold'>20+ Years of Expertise -</span> Trusted
